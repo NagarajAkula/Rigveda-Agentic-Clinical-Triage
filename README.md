@@ -1,20 +1,6 @@
-Project: RigvedaHealth AGI - Clinical Triage Environment
-​Domain: Healthcare Compliance & CBSE 2026 Mandate
-​Developer: Nagaraj Akula (Solo Founder)
-Clinical Logic: Vijayalakshmi (Google Cloud Level Up Alumna)
-​1. The Problem Statement
-​India’s CBSE 2026 mandate requires 28,000+ schools to submit monthly digital health reports. Currently, there is no standardized "Last-Mile" data entry tool for school nurses. RigvedaHealth uses an AGI "Graft Layer" to automate this compliance, linking student check-ups directly to the National Health Stack (ABDM).
-​2. The OpenEnv RL Environment
-​We have modeled the school nurse's reporting workflow as a Reinforcement Learning (RL) Environment.
-​Agent: Digital Clinical Assistant.
-​State Space: Unstructured clinical notes, ABHA ID status, and CBSE reporting fields.
-​Action Space: Parse text, Validate ABHA ID, Map to CBSE Category, Flag Emergency.
-​3. Reward Logic (Evaluation)
-​To ensure zero-error clinical reporting, the agent is graded on:
-​Standard Mapping (+10): Correctly identifying routine data (Height/Weight/Vitals).
-​Emergency Detection (+50): Identifying "Red Flag" symptoms for immediate escalation.
-​Compliance Penalty (-100): Hallucinating medical data or failing to link a valid ABHA ID.
-​4. Technical Stack
-​Intelligence: Developed using Google AI Studio (Gemini 3.1 Flash).
-​Infrastructure: Deployment-ready via Firebase Studio for offline-sync in rural clinics.
-​Interoperability: Built for ABDM M1, M2, and M3 compliance.
+Rigveda Health Neural Grid is a zero-hardware, offline-resilient Artificial General Intelligence (AGI) data orchestration pipeline designed specifically for rural Primary Health Centres (PHCs) and school wellness environments. Powered by gemini-3.1-flash-lite, the application captures fragmented, unstructured clinical voice dictations or audio transcripts at the edge and restructures them into deterministic, type-safe JSON payloads.
+​Key Features:
+​Antigravity Edge Resilience: Locally intercepts and securely caches audio inputs during cellular drops (5G/4G), auto-syncing payloads to Google Cloud once a network connection is re-established.
+​ABDM Compliance: Maps clinical variables directly into standardized registries aligned with India's National Health Authority (NHA) ABDM Sandbox requirements.
+​CBSE Wellness Alignment: Configured to process specific student health and preventative triage metrics for localized school health mandates.
+​Anti-Hallucination Framework: Strict prompt controls enforce null assignments for omitted vital metrics, maintaining true clinical reporting integrity.
